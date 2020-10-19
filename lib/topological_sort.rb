@@ -1,6 +1,6 @@
-# require_relative "topological_sort/version"
+require_relative "topological_sort/version"
 
-class TopologicalSort
+module TopologicalSort
   attr_accessor :post_order
 
   def initialize(graph)
