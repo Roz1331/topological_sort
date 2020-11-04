@@ -16,7 +16,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+For you to have a topologically sorted graph, you need to create an object of the class ```Graph```:
+``` ruby
+    graph = Graph.new
+```
+Then you need to add vertices to this graph using the class ```Node```:
+``` ruby
+    graph.nodes << (node1 = Node.new(1))
+    graph.nodes << (node2 = Node.new(2))
+```
+Due to the fact that only a directed graph can be sorted topologically, it is necessary to add an edge:
+``` ruby
+    graph.add_edge(node1, node2)
+```
+And finally you can type:
+``` ruby
+    TopologicalSortClass.new(graph)
+```
+
+#### Result
+The result for ```TopologicalSortClass.new(graph).post_order.map(&:to_s)``` is [2, 1]
+
 
 ## Development
 
@@ -35,3 +55,8 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the TopologicalSort project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/topological_sort/blob/master/CODE_OF_CONDUCT.md).
+
+
+
+
+
